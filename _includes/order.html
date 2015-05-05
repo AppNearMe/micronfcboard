@@ -1,0 +1,23 @@
+<!-- Ordering Section -->
+    <section id="order" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Order</h2>
+                    <p class="large text-muted">MicroNFCBoard can be ordered from the following distributors:</p>
+                </div>
+            </div>
+            <div class="row">
+                {% for distributor in site.distributors %}
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="text-center">
+                        <a href="{{ distributor.link }}">
+                        <img src="img/distributors/{{ distributor.image }}" class="img-responsive center-block" alt="{{ distributor.name }}"></a>
+                        <h4><a href="{{ distributor.link }}">{{ distributor.name }}</a></h4>
+                        <a href="{{ distributor.link }}" class="btn btn-primary btn-lg" role="button">Order now!</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
